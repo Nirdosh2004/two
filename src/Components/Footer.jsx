@@ -35,7 +35,7 @@ const Footer = () => {
                     <a href="https://calm-kitsune-ee5836.netlify.app/">Portfolio</a>
             </Button>
           </VStack>
-       
+          
        </Stack>   
 
     </Box>
