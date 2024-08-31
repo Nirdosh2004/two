@@ -1,4 +1,4 @@
-import { Box, color, Heading, Image, Img } from '@chakra-ui/react'
+import { Box, color, Container, Heading, Image, Img, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import {Carousel} from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
@@ -23,6 +23,17 @@ const Home = () => {
   return (
     <Box>
       <MyCarousel/>
+      <Container minH={'100vh'} maxW={'container.xl'} p={'16'} >
+         <Heading textTransform={'uppercase'} py={'2'} w={'fit-content'} borderBottom={'2px solid'} m={'auto'} >Services</Heading>
+         <Stack h={'full'} p={'4'} alignItems={'center'} direction={['column','row']} >
+          <Image src={img5} filter={'hue-rotate(-130deg)'} h={['40','400']} />
+          <Text letterSpacing={'widest'} lineHeight={'190%'} p={['4','16']} textAlign={'center'} >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias distinctio repellat odit libero nesciunt iusto, dolorem, soluta error at totam voluptatum quae sunt non aperiam debitis consequatur, natus nostrum earum!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, in amet perferendis quidem qui non magnam maiores voluptate nulla officiis, quo quis. Libero similique nemo dolorum laboriosam aspernatur consequuntur expedita?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, nihil doloremque quo eveniet adipisci excepturi dolor officia quisquam debitis voluptatem omnis sequi numquam iure alias error quae laudantium voluptates quam!
+          </Text>
+         </Stack>
+      </Container>
     </Box>
   )
 };
@@ -36,8 +47,16 @@ const MyCarousel = () => {
         </Box> 
         <Box w={'full'} h={'100vh'} >
           <Img src={img2} />
-          <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions} >Future is coding</Heading>           
+          <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions} >Future is coding</Heading>           
         </Box>  
+        <Box w={'full'} h={'100vh'} >
+          <Img src={img3} />
+          <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions} >Gaming on console</Heading>           
+        </Box> 
+        <Box w={'full'} h={'100vh'} >
+          <Img src={img4} />
+          <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions} >Nightlife is </Heading>           
+        </Box> 
     </Carousel>
     )
 }
